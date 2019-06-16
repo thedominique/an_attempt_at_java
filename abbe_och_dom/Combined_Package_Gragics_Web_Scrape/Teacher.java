@@ -13,5 +13,7 @@ public class Teacher {
 	public String get_img_addr() {
 		return img_addr;
 	}
-
+	public void print_a_stupid_msg(){
+	System.out.println("Hej abbe");
+	}
 }
