@@ -9,7 +9,7 @@ import org.jsoup.select.Elements;
 
 public class Web_Scrape {
 	public static String[] img_addr_storage = new String[10000];
-	Teacher[] teacher_arr = new Teacher[1000];
+	public static Teacher[] teacher_arr = new Teacher[1000];
 	
 	public static void scrapy_scrape() {
 		Scanner input = new Scanner(System.in);
@@ -34,6 +34,8 @@ public class Web_Scrape {
 				img_addr = img.get(e).absUrl("src");
 				print("img src for teach " + e + " " + img_addr);
 				img_addr_storage[e] = img_addr;
+				teacher_arr[e].add_img_addr(img_addr);
+				
 			}
 			
 		} catch (IOException e){
