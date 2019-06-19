@@ -3,6 +3,13 @@ package Combined_Package_Gragics_Web_Scrape;
 public class Teacher {
 	private static String img_addr;
 	private String img_src;
+	private float score;
+	
+	public Teacher(String addr, String src) {
+		img_addr = addr;
+		img_src = src;
+	}
+	
 	
 	public static void add_img_addr(String new_addr) {
 		img_addr = new_addr;
