@@ -66,9 +66,7 @@ public class DisplayImages{
 	public Pane createPane1() {
 		Pane pane = new Pane();
 		pane.setStyle("-fx-border-color: black;");
-		pane.setPrefSize(View.SCREEN_WIDTH/2, View.SCREEN_HEIGHT);
-		pane.setScaleX(0.9);
-		pane.setScaleY(0.75);
+		pane.setPrefSize(iv.getFitWidth(), iv.getFitHeight());
 		pane.getChildren().add(this.iv);
 		pane.setOnMouseClicked(e -> controller.mouseClickLeft());
 		return pane;
@@ -77,9 +75,7 @@ public class DisplayImages{
 	public Pane createPane2() {
 		Pane pane = new Pane();
 		pane.setStyle("-fx-border-color: black;");
-		pane.setPrefSize(View.SCREEN_WIDTH/2, View.SCREEN_HEIGHT);
-		pane.setScaleX(0.9);
-		pane.setScaleY(0.75);
+		pane.setPrefSize(iv2.getFitWidth(), iv2.getFitHeight());
 		pane.getChildren().add(this.iv2);
 		pane.setOnMouseClicked(e -> controller.mouseClickRight());
 		return pane;
